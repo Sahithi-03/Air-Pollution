@@ -6,8 +6,32 @@
 
 \begin{document}
 
+\section*{1D problem}
+
 \[
-u(x,t) = \frac{M}{\sqrt{4\pi Dt}} \mathrm{exp} \left( -\frac{x^{2}}{4Dt} \right)
+\frac{\partial u}{\partial t} + v \frac{\partial u}{\partial x} = D \frac{\partial^{2} u}{\partial x^{2}},
+\]
+
+with initial condition $ u(x,0) = M \delta(x)$.
+
+\subsection*{Solution}
+
+\[
+u(x,t) = \frac{M}{\sqrt{4\pi Dt}} \mathrm{exp} \left( -\frac{(x-vt)^{2}}{4Dt} \right)
+\]
+
+\section*{2D problem}
+
+\[
+\frac{\partial u}{\partial t} + v \frac{\partial u}{\partial x} + w \frac{\partial u}{\partial y} = D_{x} \frac{\partial^{2} u}{\partial x^{2}} D_{y} \frac{\partial^{2} u}{\partial y^{2}},
+\]
+
+with initial condition $u(x,y,0) = M\delta(x)\delta(y)$
+
+\subsection*{Solution}
+
+\[
+u(x,y,t) = \frac{M}{4\pi t\sqrt{D_{x}D_{y}}} \mathrm{exp} \left( -\frac{(x-vt)^{2}}{4D_{x}t} -\frac{(y-wt)^{2}}{4D_{y}t} \right)
 \]
 
 
